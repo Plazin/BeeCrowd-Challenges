@@ -1,16 +1,16 @@
 var input = require('fs').readFileSync('./dev/stdin', 'utf8');
 var lines = input.split('\n');
 
-let a = lines[0];
-console.log(a)
+let dados = lines[0].split(" ");
 
-let maiorAB = Math.max[Number(lines[0])];
+let a = (Number(dados[0]));
+let b = (Number(dados[1]));
+let c = (Number(dados[2]));
 
-//let maiorAB = (Number(a)+Number(b)+Number(abs) * (Number(a) - Number(b))) / 2
+let maiorAB = (a + b + Math.abs(a-b)) / 2;
+let maiorDeTodos = (maiorAB + c + Math.abs(maiorAB - c)) / 2;
 
-console.log(maiorAB +" "+ "eh o maior")
-console.log(a)
-
+console.log(maiorDeTodos +" eh o maior");
 
 /*Faça um programa que leia três valores e apresente o maior dos três valores lidos seguido da mensagem “eh o maior”. Utilize a fórmula:
 
