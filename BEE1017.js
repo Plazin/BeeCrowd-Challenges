@@ -4,7 +4,7 @@ var lines = input.split('\n');
 let tempoGasto = lines[0];
 let velocidadeMedia = lines[1];
 
-let litrosNecessarios = (Number(velocidadeMedia) / Number(tempoGasto));
+let litrosNecessarios = (Number(velocidadeMedia) * Number(tempoGasto)) / 12;
 
 console.log(litrosNecessarios.toFixed(3));
 
@@ -14,4 +14,4 @@ Entrada
 O arquivo de entrada contém dois inteiros. O primeiro é o tempo gasto na viagem (em horas) e o segundo é a velocidade média durante a mesma (em km/h).
 
 Saída
-Imprima a quantidade de litros necessária para realizar a viagem, com três dígitos após o ponto decimal*/
+Imprima a quantidade de litros necessária para realizar a viagem, com três dígitos após o ponto decimal.*/
