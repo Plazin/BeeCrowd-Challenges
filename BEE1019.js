@@ -11,12 +11,7 @@ let minutos = Math.floor(horasResto / 60);
 
 let segundos = Math.floor(horasResto % 60);
 
-
 console.log(horas + ":" + minutos + ":" + segundos);
-
-console.log(horas)
-console.log(minutos)
-console.log(segundos)
 
 //console.log(minutosResto)
 
