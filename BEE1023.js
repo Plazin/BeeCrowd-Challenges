@@ -1,18 +1,26 @@
 var input = require('fs').readFileSync('./dev/stdin', 'utf8');
 var lines = input.split('\n');
 
-let [A,B,C,D] = lines[0].split(" ").map(Number); //5 6 7 8
+let [a,b,c] = lines[0].split(" ").map(Number);
 
-if( (B > C) && (D > A) && (C + D) > (A + B) && (C >= 0) && (D >= 0) && (A % 2 === 0)){
-  console.log("Valores aceitos")
+let delta = b ** 2 - 4 * a * c;
+
+let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+
+if(delta < 0 || a === 0){
+  console.log("Impossivel calcular")
 } else {
-  console.log("Valores nao aceitos")
+  console.log("R1 = " + x1.toFixed(5));
+  console.log("R2 = " + x2.toFixed(5));
 }
 
-/*Leia 4 valores inteiros A, B, C e D. A seguir, se B for maior do que C e se D for maior do que A, e a soma de C com D for maior que a soma de A e B e se C e D, ambos, forem positivos e se a variável A for par escrever a mensagem "Valores aceitos", senão escrever "Valores nao aceitos".
+
+
+/*Leia 3 valores de ponto flutuante e efetue o cálculo das raízes da equação de Bhaskara. Se não for possível calcular as raízes, mostre a mensagem correspondente “Impossivel calcular”, caso haja uma divisão por 0 ou raiz de numero negativo.
 
 Entrada
-Quatro números inteiros A, B, C e D.
+Leia três valores de ponto flutuante (double) A, B e C.
 
 Saída
-Mostre a respectiva mensagem após a validação dos valores.*/
+Se não houver possibilidade de calcular as raízes, apresente a mensagem "Impossivel calcular". Caso contrário, imprima o resultado das raízes com 5 dígitos após o ponto, com uma mensagem correspondente conforme exemplo abaixo. Imprima sempre o final de linha após cada mensagem.*/
