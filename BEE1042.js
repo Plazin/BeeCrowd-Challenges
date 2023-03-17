@@ -15,7 +15,6 @@ console.log(`${ordemCrescente[0]}\n${ordemCrescente[1]}\n${ordemCrescente[2]}\n`
 console.log(`${ordemLida[0]}\n${ordemLida[1]}\n${ordemLida[2]}`);
 
 
-
 /* Leia 3 valores inteiros e ordene-os em ordem crescente. No final, mostre os valores em ordem crescente, uma linha em branco e em seguida, os valores na sequência como foram lidos.
 
 Entrada
