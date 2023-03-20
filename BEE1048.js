@@ -1,31 +1,44 @@
 var input = require('fs').readFileSync('./dev/stdin', 'utf8');
 var lines = input.split('\n');
 
-let entrada = Number(lines[0]).toFixed(2);
+let entrada = Number(lines[0]);
 
-if(entrada >=0 && entrada <= 400){
-  console.log(`Novo salario: 460.00`)
-  console.log(`Reajuste ganho: 60.00`)
+if(entrada >= 0 && entrada <= 400){
+  let porcentagem = 0.15;
+  let reajuste = entrada * porcentagem;
+  let novoSalario = Number(entrada + reajuste);
+  console.log("Novo salario: "+ novoSalario.toFixed(2))
+  console.log("Reajuste ganho: "+ reajuste.toFixed(2))
   console.log(`Em percentual: 15 %`)
 } else if(entrada > 400 && entrada <= 800){
-  console.log(`Novo salario: 896.00`)
-  console.log(`Reajuste ganho: 96.00`)
+  let porcentagem = 0.12;
+  let reajuste = entrada * porcentagem;
+  let novoSalario = Number(entrada + reajuste);
+  console.log("Novo salario: "+ novoSalario.toFixed(2))
+  console.log("Reajuste ganho: "+ reajuste.toFixed(2))
   console.log(`Em percentual: 12 %`)
 } else if(entrada > 800 && entrada <= 1200){
-  console.log(`Novo salario: 880.01`)
-  console.log(`Reajuste ganho: 80.00`)
+  let porcentagem = 0.10;
+  let reajuste = entrada * porcentagem;
+  let novoSalario = Number(entrada + reajuste);
+  console.log("Novo salario: "+ novoSalario.toFixed(2))
+  console.log("Reajuste ganho: "+ reajuste.toFixed(2))
   console.log(`Em percentual: 10 %`)
 } else if(entrada > 1200 && entrada <= 2000){
-  console.log(`Novo salario: 880.01`)
-  console.log(`Reajuste ganho: 80.00`)
+  let porcentagem = 0.07;
+  let reajuste = entrada * porcentagem;
+  let novoSalario = Number(entrada + reajuste);
+  console.log("Novo salario: "+ novoSalario.toFixed(2))
+  console.log("Reajuste ganho: "+ reajuste.toFixed(2))
   console.log(`Em percentual: 7 %`)
 } else if(entrada > 2000){
-  console.log(`Novo salario: 880.01`)
-  console.log(`Reajuste ganho: 80.00`)
+  let porcentagem = 0.04;
+  let reajuste = entrada * porcentagem;
+  let novoSalario = Number(entrada + reajuste);
+  console.log("Novo salario: "+ novoSalario.toFixed(2))
+  console.log("Reajuste ganho: "+ reajuste.toFixed(2))
   console.log(`Em percentual: 4 %`)
 }
-
-console.log(entrada)
 
 /*A empresa ABC resolveu conceder um aumento de salários a seus funcionários de acordo com a tabela abaixo:
 
