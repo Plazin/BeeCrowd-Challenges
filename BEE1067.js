@@ -3,8 +3,8 @@ var lines = input.split('\n');
 
 let x = Number(lines[0]);
 
-  for(let i = 1; i < x; i++){
-    if(x % 2 != 0){
+  for(let i = 1; i <= x; i++){
+    if(i % 2 != 0){
       console.log(i)
     }
   };
