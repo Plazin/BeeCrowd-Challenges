@@ -3,32 +3,43 @@ var lines = input.split('\n');
 
 let entrada = Number(lines[0]);
 
-let renda = [
+ if(entrada >= 0 && entrada <= 2000){
+  console.log("Isento");
+} else if(entrada > 2000 && entrada <= 3000){
+  let impostoDevido = ((entrada - 2000) * 0.08).toFixed(2);
+  console.log(`R$ ${impostoDevido}`);
+} else if(entrada > 3000 && entrada <= 4500){
+  let impostoDevido = (((entrada - 3000) * 0.18) + (1000 * 0.08)).toFixed(2);
+  console.log(`R$ ${impostoDevido}`);
+} else if(entrada > 4500){
+  let impostoDevido = (((entrada - 4500) * 0.28) + (1500 * 0.18) + (1000 * 0.08)).toFixed(2);
+  console.log(`R$ ${impostoDevido}`);
+}
+
+/* let renda = [
   {
     saida: "Isento",
     imposto: "isento",
     condicao: entrada >= 0 && entrada <= 2000.00,
   },
   {
-    saida: `R$ ${(entrada - 2000) * 0.08}`,
+    saida: `R$ ${(entrada - 1000) * 0.08}`,
     imposto: "8%",
     condicao: entrada > 2000.00 && entrada <= 3000.00
   },
   {
-    saida: `R$ ${(entrada - 1500) * 0.08}`,
+    saida: `R$ ${(entrada - 1500) * 0.18}`,
     imposto: "18%",
     condicao: entrada > 3000.00 && entrada <= 4500.00
   },
   {
-    saida: `R$ ${(entrada - 1500) * 0.18}`,
+    saida: `R$ ${(entrada) * 0.18 + (entrada - 4500)}`,
     imposto: "28%",
     condicao: entrada > 4500.00
   }
-]
+];
 
-let resposta = renda.filter(dado => dado.condicao === true)[0].saida
-
-console.log(resposta)
+let impostoDevido = renda.filter(dado => dado.condicao === true)[0].saida
 
 /*Em um país imaginário denominado Lisarb, todos os habitantes ficam felizes em pagar seus impostos, pois sabem que nele não existem políticos corruptos e os recursos arrecadados são utilizados em benefício da população, sem qualquer desvio. A moeda deste país é o Rombus, cujo símbolo é o R$.
 
