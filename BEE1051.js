@@ -4,16 +4,19 @@ var lines = input.split('\n');
 let entrada = Number(lines[0]);
 
  if(entrada >= 0 && entrada <= 2000){
-  console.log("Isento");
+    console.log("Isento");
+
 } else if(entrada > 2000 && entrada <= 3000){
-  let impostoDevido = ((entrada - 2000) * 0.08).toFixed(2);
-  console.log(`R$ ${impostoDevido}`);
+    let impostoDevido = ((entrada - 2000) * 0.08).toFixed(2);
+    console.log(`R$ ${impostoDevido}`);
+
 } else if(entrada > 3000 && entrada <= 4500){
-  let impostoDevido = (((entrada - 3000) * 0.18) + (1000 * 0.08)).toFixed(2);
-  console.log(`R$ ${impostoDevido}`);
+    let impostoDevido = (((entrada - 3000) * 0.18) + (1000 * 0.08)).toFixed(2);
+    console.log(`R$ ${impostoDevido}`);
+
 } else if(entrada > 4500){
-  let impostoDevido = (((entrada - 4500) * 0.28) + (1500 * 0.18) + (1000 * 0.08)).toFixed(2);
-  console.log(`R$ ${impostoDevido}`);
+    let impostoDevido = (((entrada - 4500) * 0.28) + (1500 * 0.18) + (1000 * 0.08)).toFixed(2);
+    console.log(`R$ ${impostoDevido}`);
 }
 
 /* let renda = [
