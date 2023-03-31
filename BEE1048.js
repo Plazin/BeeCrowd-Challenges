@@ -7,6 +7,7 @@ if(entrada >= 0 && entrada <= 400){
   let porcentagem = 0.15;
   let reajuste = entrada * porcentagem;
   let novoSalario = Number(entrada + reajuste);
+
   console.log("Novo salario: "+ novoSalario.toFixed(2))
   console.log("Reajuste ganho: "+ reajuste.toFixed(2))
   console.log(`Em percentual: 15 %`)
@@ -14,6 +15,7 @@ if(entrada >= 0 && entrada <= 400){
   let porcentagem = 0.12;
   let reajuste = entrada * porcentagem;
   let novoSalario = Number(entrada + reajuste);
+
   console.log("Novo salario: "+ novoSalario.toFixed(2))
   console.log("Reajuste ganho: "+ reajuste.toFixed(2))
   console.log(`Em percentual: 12 %`)
@@ -21,6 +23,7 @@ if(entrada >= 0 && entrada <= 400){
   let porcentagem = 0.10;
   let reajuste = entrada * porcentagem;
   let novoSalario = Number(entrada + reajuste);
+
   console.log("Novo salario: "+ novoSalario.toFixed(2))
   console.log("Reajuste ganho: "+ reajuste.toFixed(2))
   console.log(`Em percentual: 10 %`)
@@ -28,6 +31,7 @@ if(entrada >= 0 && entrada <= 400){
   let porcentagem = 0.07;
   let reajuste = entrada * porcentagem;
   let novoSalario = Number(entrada + reajuste);
+
   console.log("Novo salario: "+ novoSalario.toFixed(2))
   console.log("Reajuste ganho: "+ reajuste.toFixed(2))
   console.log(`Em percentual: 7 %`)
@@ -35,6 +39,7 @@ if(entrada >= 0 && entrada <= 400){
   let porcentagem = 0.04;
   let reajuste = entrada * porcentagem;
   let novoSalario = Number(entrada + reajuste);
+  
   console.log("Novo salario: "+ novoSalario.toFixed(2))
   console.log("Reajuste ganho: "+ reajuste.toFixed(2))
   console.log(`Em percentual: 4 %`)
