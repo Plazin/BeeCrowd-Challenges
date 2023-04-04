@@ -13,7 +13,7 @@ for(let i = 0; i < entrada.length; i++){
 }
 
 console.log(`${numerosPositivos.length} valores positivos`)
-console.log(somaPositivos / numerosPositivos.length)
+console.log((somaPositivos / numerosPositivos.length).toFixed(1))
 
 /* `${entrada[i].length} números positivos`
 console.log(`${numerosPositivos.length} numeros positivos`) */
