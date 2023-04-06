@@ -2,17 +2,24 @@ var input = require('fs').readFileSync('./dev/stdin', 'utf8');
 var lines = input.split('\n').map(Number);
 
 let entrada = lines;
+let valores = [];
 
 for(i = 0; i < entrada.length; i++){
-  
   if(entrada[i] % 2 === 0){
-    console.log(`${i} valor(es) par(es)`)
-  } else if(entrada[i] % 2 !== 0){
-    console.log(`${i} valor(es) ímpar(es)`)
-  } else if(entrada[i] > 0){
-    console.log(`${i} valor(es) positivo(s)`)
-  } else if(entrada[i] < 0){
-    console.log(`${i} valor(es) negativo(s)`)
+    valores.push(entrada[i])
+    console.log(`${valores.length} valor(es) par(es)`)
+  }
+  if(entrada[i] % 2 !== 0){
+    valores.push(entrada[i])
+    console.log(`${valores.length} valor(es) ímpar(es)`)
+  }
+  if(entrada[i] > 0){
+    valores.push(entrada[i])
+    console.log(`${valores.length} valor(es) positivo(s)`)
+  }
+  if(entrada[i] < 0){
+    valores.push(entrada[i])
+    console.log(`${valores.length} valor(es) negativo(s)`)
   }
 }
 

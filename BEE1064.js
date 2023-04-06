@@ -5,7 +5,7 @@ let entrada = lines;
 let numerosPositivos = [];
 let somaPositivos;
 
-for(let i = 0; i < entrada.length; i++){
+for(let i = 0; i <= entrada.length; i++){
   if(entrada[i] > 0){
     numerosPositivos.push(entrada[i])
     somaPositivos = numerosPositivos.reduce((a, b) => a + b);
