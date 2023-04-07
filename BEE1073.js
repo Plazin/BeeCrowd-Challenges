@@ -1,7 +1,7 @@
 var input = require('fs').readFileSync('./dev/stdin', 'utf8');
 var lines = input.split('\n').map(Number);
 
-
+let entrada = lines;
 
 /*Leia um valor inteiro N. Apresente o quadrado de cada um dos valores pares, de 1 até N, inclusive N, se for o caso.
 
