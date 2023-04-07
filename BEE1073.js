@@ -1,7 +1,21 @@
 var input = require('fs').readFileSync('./dev/stdin', 'utf8');
-var lines = input.split('\n').map(Number);
+var lines = input.split('\n');
 
-let entrada = lines;
+let entrada = Number(lines);
+
+if(entrada > 5 && entrada <= 2000){
+    for(let i = 1; i <= entrada; i++){
+        if(i % 2 === 0){
+            console.log(`${i}^2 = ${i**2}`)
+        }
+}
+}else{
+    return null
+}
+
+
+
+
 
 /*Leia um valor inteiro N. Apresente o quadrado de cada um dos valores pares, de 1 até N, inclusive N, se for o caso.
 
