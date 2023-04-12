@@ -6,7 +6,7 @@ let valorPar = [],
     valorPos = [],
     valorNeg = []
 
-for(i = 0; i < lines.length - 1; i++){// O exercicio apenas é aprovado com o -1 no lines.length, não me pergunte o porquê.
+for(let i = 0; i < lines.length - 1; i++){// O exercicio apenas é aprovado com o -1 no lines.length, não me pergunte o porquê.
   if(lines[i] % 2 === 0){
     valorPar.push(lines[i])
   }
